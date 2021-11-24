@@ -1,9 +1,14 @@
 package com.juancalle.advancedandroid.home
 
+import com.juancalle.advancedandroid.navigation.ScreenNavigatorModule
 import dagger.Subcomponent
 import dagger.android.AndroidInjector
 
-@Subcomponent
+@Subcomponent(
+    modules = [
+        ScreenNavigatorModule::class
+    ]
+)
 interface MainActivityComponent : AndroidInjector<MainActivity> {
 
     @Subcomponent.Factory
